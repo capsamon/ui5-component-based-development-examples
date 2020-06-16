@@ -1,9 +1,10 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast"
-], function(Controller, MessageToast) {
+	"coremodules/basecontrollers/BaseController",
+	"sap/m/MessageToast",
+	"coremodules/eventbus"
+], function(BaseController, MessageToast, eventbus) {
 	"use strict";
-	return Controller.extend("ComponentBasedExampleProject.controller.Main", {
+	return BaseController.extend("ComponentBasedExampleProject.controller.Main", {
 		
 		onAfterRendering: function(){
 			this.calculateTotals();
@@ -73,10 +74,6 @@ sap.ui.define([
 			aBooks.push(oBookToAdd);
 			oModel.setProperty("/books", aBooks);
 			this.calculateTotals();
-			oEvt.getSource().getParent().close();
-		},
-		
-		onCloseDialog: function(oEvt){
 			oEvt.getSource().getParent().close();
 		}
 	});

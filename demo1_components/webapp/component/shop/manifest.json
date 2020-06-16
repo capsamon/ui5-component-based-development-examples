@@ -1,0 +1,88 @@
+{
+    "_version": "1.4.0",
+    "sap.app": {
+        "id": "displayschetsen",
+        "type": "application",
+        "title": "Storingsapp",
+        "description": "DisplaySchetsen",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://detail-view",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_hcb",
+            "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "displayschetsen.view.DisplaySchetsen",
+            "type": "XML"
+        },
+        "componentUsages": {
+            "schetsenkaart": {
+                "name": "schetsenkaart",
+                "manifest": true,
+                "componentData": {
+                    "displaySchets": true
+                }
+            },
+            "schetsen": {
+                "name": "schetsen",
+                "manifest": true,
+                "componentData": {
+                    "displaySchets": true
+                }
+            }
+        },
+        "dependencies": {
+            "minUI5Version": "1.42.0",
+            "libs": {
+                "sap.ui.core": {
+                    "minVersion": "1.42.0"
+                },
+                "sap.m": {
+                    "minVersion": "1.42.0"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+        },
+        "resources": {
+            "js": [
+            ]
+        },
+        "routing": {
+          "config": {
+              "routerClass": "sap.m.routing.Router",
+              "viewType": "XML",
+              "viewPath": "displayschetsen.view"
+          },
+          "routes": [
+              {
+                  "pattern": "DisplaySchets/{guid}",
+                  "name": "DisplaySchets"
+              }
+          ]
+        }
+    }
+}

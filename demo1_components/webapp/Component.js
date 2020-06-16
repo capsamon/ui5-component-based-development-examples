@@ -1,4 +1,4 @@
-/* global mobx */
+/* global */
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
@@ -15,6 +15,8 @@ sap.ui.define([
 
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
+
+			this.getRouter().initialize();
 		},
 	});
 });

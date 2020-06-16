@@ -39,21 +39,26 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ComponentBasedExampleProject.view.Main",
+			"viewName": "ComponentBasedExampleProject.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
-			"minUI5Version": "1.30.0",
-			"libs": {
-				"sap.ui.core": {},
-				"sap.m": {},
-				"sap.ui.layout": {},
-				"sap.ushell": {},
-				"sap.collaboration": {},
-				"sap.ui.comp": {},
-				"sap.uxap": {}
-			}
+			"minUI5Version": "1.42.0",
+            "libs": {
+                "sap.ui.core": {
+                    "minVersion": "1.42.0"
+                },
+                "sap.m": {
+                    "minVersion": "1.42.0"
+                }
+            }
 		},
+		"componentUsages": {
+            "shop": {
+                "name": "shop",
+                "manifest": true
+            }
+        },
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
@@ -70,6 +75,58 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
-		}
+		},
+		"routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "ComponentBasedExampleProject.view",
+                "controlId": "idAppControl",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "Overview",
+                    "target": [
+                        "Overview"
+                    ]
+				},
+				{
+                    "pattern": "main",
+                    "name": "Main",
+                    "target": [
+                        "Main"
+                    ]
+                },
+                {
+                    "pattern": "Shop",
+                    "name": "Shop",
+                    "target": [
+                    	"Shop"
+					]
+                }
+            ],
+            "targets": {
+				"Overview": {
+                    "viewName": "Overview",
+                    "viewLevel": 1,
+                    "viewId": "Overview",
+                    "transition": "show"
+                },
+				"Main": {
+                    "viewName": "Main",
+                    "viewLevel": 1,
+                    "viewId": "Main",
+                    "transition": "show"
+                },
+                "Shop": {
+                    "type": "Component",
+                    "usage": "shop",
+                    "transition": "show"
+				}
+            }
+        }
 	}
 }

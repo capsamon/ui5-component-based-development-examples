@@ -1,0 +1,29 @@
+<mvc:View controllerName="ComponentBasedExampleProject.controller.App"
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core" displayBlock="true"
+	xmlns="sap.m">
+	<App>
+		<Page>
+			<customHeader>
+				<Bar>
+					<contentLeft>
+						<HBox>
+							<Button id="btnNavBack" icon="sap-icon://nav-back" press="onNavBackPressed"/>
+						</HBox>
+					</contentLeft>
+					<contentMiddle>
+						<Title text="Component architecture example project"/>
+					</contentMiddle>
+					<contentRight>
+						<HBox>
+							<Button icon="sap-icon://map" />
+						</HBox>
+					</contentRight>
+				</Bar>
+			</customHeader>
+			<content>
+				<NavContainer id="idAppControl" navigate="onNavigate" afterNavigate="onAfterNavigate"/>
+			</content>
+		</Page>
+	</App>
+</mvc:View>
