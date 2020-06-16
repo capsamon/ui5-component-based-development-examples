@@ -1,0 +1,83 @@
+<mvc:View controllerName="MobXExampleProject.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table footerText="Total amount sold: {/totalNumberSoldBooks}" headerText="Books" items="{/bookView}">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="Books" width="4em" />
+								<ToolbarSpacer />
+								<Slider enableTickmarks="true" value="{path: '/currentStep', mode: 'OneWay'}" min="0" max="{/historyLength}" liveChange="onHistoryChange" />
+								<ToolbarSpacer />
+								<Button icon="sap-icon://save" press="onSave" />
+								<Button icon="sap-icon://undo" press="onRecover" />
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="25%">
+								<Text text="Book"/>
+							</Column>
+							<Column width="25%">
+								<Text text="Author"/>
+							</Column>
+							<Column width="25%">
+								<Text text="Date released"/>
+							</Column>
+							<Column width="25%">
+								<Text text="Sold"/>
+							</Column>
+							<Column width="10em">
+								<Text text=""/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{name}"/>
+									<Text text="{author}"/>
+									<Text text="{ path: 'dateReleased', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'dd-MM-yyyy' }}"/>
+									<Text text="{amountSold}"/>
+									<HBox>
+										<Button text="+" press="onAddSoldBook"/>
+										<Button text="-" press="onRemoveSoldBook"/>
+									</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Table class="sapUiMediumMarginTop" headerText="Bestsellers" items="{/bestsellers}">
+						<columns>
+							<Column width="25%">
+								<Text text="Book"/>
+							</Column>
+							<Column width="25%">
+								<Text text="Author"/>
+							</Column>
+							<Column width="25%">
+								<Text text="AmountSold"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{name}"/>
+									<Text text="{author}"/>
+									<Text text="{amountSold}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button text="Add book" press="onAddBookPress"></Button>	
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
