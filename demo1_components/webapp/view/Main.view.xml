@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
+			<Page showHeader="false">
 				<content>
 					<Table footerText="Total amount sold: {/totalNumberSoldBooks}" headerText="Books" items="{/books}">
 						<columns>

@@ -10,7 +10,7 @@ sap.ui.define([
 		},
 		
 		onNextPagePress: function () {
-			alert("hi");
+			this.getRouter().navTo("Main");
 		}
 	});
 });

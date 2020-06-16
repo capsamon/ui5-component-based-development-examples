@@ -10,6 +10,14 @@ sap.ui.define([
 
 		onAfterRendering: function (oEvt) {
 			//
+		},
+
+		onOpenSettings: function () {
+			
+		},
+
+		onShopPress: function () {
+			this.getRouter().navTo("Shop");
 		}
 	});
 

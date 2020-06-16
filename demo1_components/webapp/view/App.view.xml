@@ -8,7 +8,7 @@
 				<Bar>
 					<contentLeft>
 						<HBox>
-							<Button id="btnNavBack" icon="sap-icon://nav-back" press="onNavBackPressed"/>
+							<Button id="btnNavBack" icon="sap-icon://nav-back" press="onNavBack"/>
 						</HBox>
 					</contentLeft>
 					<contentMiddle>
@@ -16,7 +16,8 @@
 					</contentMiddle>
 					<contentRight>
 						<HBox>
-							<Button icon="sap-icon://map" />
+							<Button icon="sap-icon://settings" press="onOpenSettings"/>
+							<Button icon="sap-icon://retail-store" press="onShopPress"/>
 						</HBox>
 					</contentRight>
 				</Bar>

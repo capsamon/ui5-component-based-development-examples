@@ -23,12 +23,17 @@
 
 		<script>
 			sap.ui.getCore().attachInit(function() {
-				new sap.m.Shell({
-					app: new sap.ui.core.ComponentContainer({
-						height : "100%",
-						name : "ComponentBasedExampleProject"
-					})
-				}).placeAt("content");
+				// de lijst met componenten staat in components.json
+				$.getJSON("components.json").then((components) => {
+					sap.ui.require(["coremodules/private/apploader"], async function(apploader) {
+						await apploader.startSplashScreen();
+						await apploader.registerComponents(components);
+						await apploader.preloadComponents(components);
+						await apploader.loadComponent("veldwerkerapp");
+						await apploader.startAnimationToMainUI();
+						await apploader.initXSAConnection();
+					});
+				});
 			});
 		</script>
 	</head>
