@@ -92,11 +92,9 @@ sap.ui.define([
 		loadComponent,
 		registerComponents,
 		preloadComponents,
-		initXSAConnection,
 		startSplashScreen,
 		startAnimationToMainUI,
-		enableMocking,
-		getBackendUri
+		enableMocking
 	}
 	
 });

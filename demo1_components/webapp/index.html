@@ -15,7 +15,8 @@
 			data-sap-ui-resourceroots='{
 				"ComponentBasedExampleProject": "",
 				"coremodules": "./core",
-				"corelibraries": "./libraries"
+				"corelibraries": "./libraries",
+				"com.alliander.sapui5.utils": "./alliander/utils"
 			}'>
 		</script>
 
@@ -29,16 +30,17 @@
 						await apploader.startSplashScreen();
 						await apploader.registerComponents(components);
 						await apploader.preloadComponents(components);
-						await apploader.loadComponent("veldwerkerapp");
+						await apploader.loadComponent("ComponentBasedExampleProject");
 						await apploader.startAnimationToMainUI();
-						await apploader.initXSAConnection();
 					});
 				});
 			});
 		</script>
 	</head>
 
-	<body class="sapUiBody" id="content">
+	<body class="sapUiBody">
+		<div id="content"></div>
+		<div id="splashscreen"></div>
 	</body>
 
 </html>

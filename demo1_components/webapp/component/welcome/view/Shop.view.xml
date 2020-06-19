@@ -1,0 +1,32 @@
+<mvc:View controllerName="ComponentBasedExampleProject.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<f:GridList id="gridList" headerText="Available books" items="{ path: '/books' }">
+						<f:GridListItem>
+							<VBox height="100%">
+								<VBox class="sapUiSmallMargin">
+									<layoutData>
+										<FlexItemData growFactor="1" shrinkFactor="0" /><!-- Don't shrink below minimum size. Fill space if available. -->
+									</layoutData>
+									<Title text="{name}" wrapping="true" />
+									<Label text="{author}" wrapping="true" />
+									<Image src="{image}" wrapping="true" />
+								</VBox>
+							</VBox>
+						</f:GridListItem>
+					</f:GridList>
+				</content>
+				<footer>
+					<Bar>
+						<contentRight>
+							<Button text="Add book" press="onAddBookPress"></Button>	
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
