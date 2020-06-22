@@ -1,0 +1,13 @@
+<mvc:View controllerName="book.controller.BookSnippet" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m">
+	<VBox height="80%">
+		<VBox class="sapUiSmallMargin">
+			<layoutData>
+				<FlexItemData growFactor="1" shrinkFactor="0" /><!-- Don't shrink below minimum size. Fill space if available. -->
+			</layoutData>
+			<Title text="{name}" wrapping="true" />
+			<Label text="{author}" wrapping="true" />
+			<Image src="{image}" wrapping="true" />
+		</VBox>
+	</VBox>
+</mvc:View>

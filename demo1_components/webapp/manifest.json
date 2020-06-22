@@ -56,6 +56,10 @@
             "shop": {
                 "name": "shop",
                 "manifest": true
+			},
+			"welcome": {
+                "name": "welcome",
+                "manifest": true
             }
         },
 		"contentDensities": {
@@ -85,15 +89,8 @@
                 "async": true
             },
             "routes": [
-                {
-                    "pattern": "",
-                    "name": "Overview",
-                    "target": [
-                        "Overview"
-                    ]
-				},
 				{
-                    "pattern": "main",
+                    "pattern": "",
                     "name": "Main",
                     "target": [
                         "Main"
@@ -108,18 +105,11 @@
                 }
             ],
             "targets": {
-				"Overview": {
-                    "viewName": "Overview",
-                    "viewLevel": 1,
-                    "viewId": "Overview",
-                    "transition": "show"
-                },
 				"Main": {
-                    "viewName": "Main",
-                    "viewLevel": 1,
-                    "viewId": "Main",
+                    "type": "Component",
+                    "usage": "welcome",
                     "transition": "show"
-                },
+				},
                 "Shop": {
                     "type": "Component",
                     "usage": "shop",

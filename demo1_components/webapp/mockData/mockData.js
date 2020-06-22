@@ -1,12 +1,7 @@
-sap.ui.define([], function() {
+//Normally this would be your server connection file, which fetches data from a server
+sap.ui.define([], function () {
 	"use strict";
 	return {
-		bookToAdd: {
-			name: "",
-			author: "",
-			dateReleased: new Date(),
-			amountSold: 0
-		},
 		books: [{
 			name: "Great stories I",
 			author: "A. Cooijmans",

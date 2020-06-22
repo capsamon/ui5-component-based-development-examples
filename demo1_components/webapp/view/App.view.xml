@@ -1,7 +1,4 @@
-<mvc:View controllerName="ComponentBasedExampleProject.controller.App"
-	xmlns:mvc="sap.ui.core.mvc" 
-	xmlns:core="sap.ui.core" displayBlock="true"
-	xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App>
 		<Page>
 			<customHeader>
@@ -16,7 +13,6 @@
 					</contentMiddle>
 					<contentRight>
 						<HBox>
-							<Button icon="sap-icon://settings" press="onOpenSettings"/>
 							<Button icon="sap-icon://retail-store" press="onShopPress"/>
 						</HBox>
 					</contentRight>

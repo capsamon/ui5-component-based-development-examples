@@ -1,10 +1,10 @@
 {
     "_version": "1.4.0",
     "sap.app": {
-        "id": "shop",
+        "id": "welcome",
         "type": "application",
-        "title": "Shop",
-        "description": "Shop component",
+        "title": "Welcome",
+        "description": "Main page component",
         "applicationVersion": {
             "version": "1.0.0"
         }
@@ -31,7 +31,7 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "shop.view.Shop",
+            "viewName": "welcome.view.Main",
             "type": "XML"
         },
         "dependencies": {
@@ -44,6 +44,12 @@
                     "minVersion": "1.42.0"
                 }
             }
+        },
+        "componentUsages": {
+			"book": {
+                "name": "book",
+                "manifest": true
+			}
         },
         "contentDensities": {
             "compact": true,
@@ -64,8 +70,8 @@
           },
           "routes": [
               {
-                  "pattern": "Shopaaa",
-                  "name": "Shop"
+                  "pattern": "ExtraInComponentRoute",
+                  "name": "Main"
               }
           ]
         }

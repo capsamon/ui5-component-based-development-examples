@@ -1,10 +1,10 @@
 {
     "_version": "1.4.0",
     "sap.app": {
-        "id": "shop",
+        "id": "book",
         "type": "application",
-        "title": "Shop",
-        "description": "Shop component",
+        "title": "Book",
+        "description": "Book component",
         "applicationVersion": {
             "version": "1.0.0"
         }
@@ -31,7 +31,7 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "shop.view.Shop",
+            "viewName": "book.view.BookSnippet",
             "type": "XML"
         },
         "dependencies": {
@@ -54,20 +54,6 @@
         "resources": {
             "js": [
             ]
-        },
-        "routing": {
-          "config": {
-              "routerClass": "sap.m.routing.Router",
-              "viewType": "XML",
-              "viewPath": "shop.view",
-              "async": true
-          },
-          "routes": [
-              {
-                  "pattern": "Shopaaa",
-                  "name": "Shop"
-              }
-          ]
         }
     }
 }

@@ -15,8 +15,7 @@
 			data-sap-ui-resourceroots='{
 				"ComponentBasedExampleProject": "",
 				"coremodules": "./core",
-				"corelibraries": "./libraries",
-				"com.alliander.sapui5.utils": "./alliander/utils"
+				"corelibraries": "./libraries"
 			}'>
 		</script>
 
@@ -27,7 +26,6 @@
 				// de lijst met componenten staat in components.json
 				$.getJSON("components.json").then((components) => {
 					sap.ui.require(["coremodules/private/apploader"], async function(apploader) {
-						await apploader.startSplashScreen();
 						await apploader.registerComponents(components);
 						await apploader.preloadComponents(components);
 						await apploader.loadComponent("ComponentBasedExampleProject");

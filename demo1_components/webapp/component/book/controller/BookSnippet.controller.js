@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (BaseController) {
 	"use strict";
 
-	return BaseController.extend("ComponentBasedExampleProject.controller.App", {
+	return BaseController.extend("book.controller.BookSnippet", {
 		onInit: function () {
 			//
 		},
@@ -14,10 +14,6 @@ sap.ui.define([
 
 		onOpenSettings: function () {
 			
-		},
-
-		onShopPress: function () {
-			this.getRouter().navTo("Shop");
 		}
 	});
 

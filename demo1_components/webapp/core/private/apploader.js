@@ -1,9 +1,8 @@
 /* global */
 sap.ui.define([
-	"com/alliander/sapui5/utils/SplashScreen",
 	"sap/ui/core/ComponentContainer",
 	"sap/m/Shell"
-], function (SplashScreen, ComponentContainer, Shell) {
+], function (ComponentContainer, Shell) {
 	"use strict";
 
 	function startAnimationToMainUI() {
@@ -16,10 +15,6 @@ sap.ui.define([
 				});
 			}, 900);
 		}, 1600);
-	}
-
-	function startSplashScreen() {
-		new SplashScreen().placeAt("splashscreen");
 	}
 
 	function loadComponent(sComponent) {
@@ -92,7 +87,6 @@ sap.ui.define([
 		loadComponent,
 		registerComponents,
 		preloadComponents,
-		startSplashScreen,
 		startAnimationToMainUI,
 		enableMocking
 	}
