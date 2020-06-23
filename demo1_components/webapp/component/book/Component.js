@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/ui/core/UIComponent"
 ], function(UIComponent) {
 
-	return UIComponent.extend("shop.Component", {
+	return UIComponent.extend("book.Component", {
 
 		metadata: {
 			manifest: "json"

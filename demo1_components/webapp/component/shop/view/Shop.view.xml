@@ -4,15 +4,8 @@
 		<pages>
 			<Page showHeader="false">
 				<content>
-					
+					<Label text="Test"/>
 				</content>
-				<footer>
-					<Bar>
-						<contentRight>
-							<Button text="Add book"></Button>	
-						</contentRight>
-					</Bar>
-				</footer>
 			</Page>
 		</pages>
 	</App>

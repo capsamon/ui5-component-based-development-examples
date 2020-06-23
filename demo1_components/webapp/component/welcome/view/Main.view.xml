@@ -3,10 +3,27 @@
 	<App>
 		<pages>
 			<Page showHeader="false">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<HBox>
+								<Button id="btnNavBack" icon="sap-icon://nav-back" press="onNavBack"/>
+							</HBox>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="Component architecture example project"/>
+						</contentMiddle>
+						<contentRight>
+							<HBox>
+								<Button icon="sap-icon://retail-store" press="onShopPress"/>
+							</HBox>
+						</contentRight>
+					</Bar>
+				</customHeader>
 				<content>
 					<f:GridList id="gridList" headerText="Available books" items="{ path: '/books' }">
 						<f:GridListItem>
-                    		<core:ComponentContainer height="100%" width="100%" usage="book" async="true"/>
+							<core:ComponentContainer height="100%" width="100%" usage="book" async="true" propagateModel="true"/>
 						</f:GridListItem>
 					</f:GridList>
 				</content>

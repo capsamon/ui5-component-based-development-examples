@@ -53,14 +53,14 @@
             }
 		},
 		"componentUsages": {
-            "shop": {
-                "name": "shop",
-                "manifest": true
-			},
 			"welcome": {
                 "name": "welcome",
                 "manifest": true
-            }
+            },
+			"shop": {
+                "name": "shop",
+                "manifest": true
+			}
         },
 		"contentDensities": {
 			"compact": true,

@@ -60,20 +60,6 @@
         "resources": {
             "js": [
             ]
-        },
-        "routing": {
-          "config": {
-              "routerClass": "sap.m.routing.Router",
-              "viewType": "XML",
-              "viewPath": "shop.view",
-              "async": true
-          },
-          "routes": [
-              {
-                  "pattern": "ExtraInComponentRoute",
-                  "name": "Main"
-              }
-          ]
         }
     }
 }
