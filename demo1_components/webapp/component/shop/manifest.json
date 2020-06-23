@@ -64,8 +64,8 @@
           },
           "routes": [
               {
-                  "pattern": "Shopaaa",
-                  "name": "Shop"
+                  "pattern": "",
+                  "name": "Main"
               }
           ]
         }
