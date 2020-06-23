@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
 	<App>
-		<Page>
+		<Page showHeader="false">
 			<content>
 				<NavContainer id="idAppControl"/>
 			</content>

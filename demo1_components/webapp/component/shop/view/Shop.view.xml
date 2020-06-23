@@ -2,9 +2,26 @@
 	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
-			<Page showHeader="false">
+			<Page showHeader="true">
+				<customHeader>
+					<Bar>
+						<contentLeft>
+							<HBox>
+								<Button id="btnNavBack" icon="sap-icon://nav-back" press="onNavBack"/>
+							</HBox>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="Component architecture example project"/>
+						</contentMiddle>
+						<contentRight>
+							<HBox>
+								<Button icon="sap-icon://e-learning" press="onBookOverviewPress"/>
+							</HBox>
+						</contentRight>
+					</Bar>
+				</customHeader>
 				<content>
-					<Label text="Test"/>
+					<Label text="Dit is de shop pagina"/>
 				</content>
 			</Page>
 		</pages>

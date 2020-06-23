@@ -2,7 +2,7 @@
 	xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:f="sap.f">
 	<App>
 		<pages>
-			<Page showHeader="false">
+			<Page showHeader="true">
 				<customHeader>
 					<Bar>
 						<contentLeft>

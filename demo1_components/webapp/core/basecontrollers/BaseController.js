@@ -62,6 +62,14 @@ function (
 
 		onNavBack: function () {
 			history.go(-1);
+		},
+
+		onShopPress: function () {
+			this.getRouter().navTo("Shop");
+		},
+
+		onBookOverviewPress: function () {
+			this.getRouter().navTo("Main");
 		}
 	});
 });
